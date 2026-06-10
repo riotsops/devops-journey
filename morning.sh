@@ -19,3 +19,13 @@ elif [ $HOUR -gt 12 -a $HOUR -lt 17 ]; then
 else
   echo "Good evening, Hope your day went good"
 fi
+
+echo "Disk space:"
+df -h /storage/emulated/0 | tail -1
+
+DISK=$(df /storage/emulated/0 | tail -1 | awk {'print $5'} | tr -d '%')
+if [ $DISK -gt 90 ]; then
+ echo "storage is about to full - clean it"
+else
+ echo "storage is fine"
+fi
