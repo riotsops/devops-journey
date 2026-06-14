@@ -6,3 +6,4 @@ This is from conflict-test branch
 
 Version: production
 
+version: conflict-demo
