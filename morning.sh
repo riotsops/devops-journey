@@ -6,6 +6,9 @@ echo "Checking devops-journey folder..."
 ls $PROJECT
 echo "Git status:"
 git -C ~/devops-journey status
+if [ $? -ne 0 ]; then
+    echo "WARNING: Git status check failed!"
+fi
 echo "Ready to learn!"
 echo "Current date and time:"
 date
